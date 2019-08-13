@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  /* 主轴方向 */
+  flex-direction: column;
+  /* 水平左右居中 */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+.icon.down {
+  transform: rotate(180deg);
+}
+.icon.down .arrow {
+  border-bottom-color: green;
+}
+.icon.down .rect {
+  background: green;
+}
+.icon.keep .arrow {
+  border-width: 0;
+  border-bottom-color: orange;
+}
+.icon.keep .rect {
+  width: 10px;
+  background: orange;
+}
+.icon .arrow {
+  /* 正方形够小则四个边框为三角 */
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-color: red;
+  /* 设置三角形向上 */
+  margin-top: -8px;
+}
+.icon .rect {
+  width: 6px;
+  height: 6px;
+  background: red;
+  /* 设置显示 */
+  /* flex-shrink: 0; */
+}
